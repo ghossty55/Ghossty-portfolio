@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /*importa la fuente VT323 desde los servidores de google*/
+
+*{
+  font-family: "vt323", cursive;
+}
+
+nav > ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 1px;
+    width: 100%;    
+}
+
+nav> ul li {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+nav > ul li a{
+    background-color: transparent;
+    padding: 16px 40px;
+    border-radius: 8px;
+    cursor: url("images/pointer1.cur"), pointer;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    display: inline-block;
+    border: 2px solid #5effa4;
+    color: #5effa4;
+    font-size: 28px;
+    text-decoration: none;
+   
+}
+
+nav > ul li a:hover{
+     transform: scale(1.1);
+
+   
+     
+    
+    background-color: #5effa4;
+    color: black;
+   
+     box-shadow: 
+    0 0 10px #5effa4,
+    0 0 20px #00ffcc;
+
+
+}
+
+
+body{
+    background-color: grey;
+    cursor: url("images/cursor1.cur") , auto;
+    background-image: url("images/header_img2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e0ffe8;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.5);/*crea la caja negra translucida que divide el contenido del fondo*/
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 40px auto;
+    /*animation: fadeIn 3.5s ease-out forwards;
+    animation-delay: 1.6s;*/
+    box-shadow: 0 0 30px rgba(0, 250, 170, 0.2);
+    
+}
+   
+
+a {
+    color: #82f9ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 2px #00ffff;
+
+
+}
+
+a, button, [role="button"] {
+    cursor: url("images/pointer1.cur"), pointer;
+}
+
+header {
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.5);/*crea la caja negra translucida que divide el contenido del fondo*/
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 255, 170, 0.3);
+    top: 0;
+    z-index: 1000;
+ 
+}
+
+
+ h2 {
+    text-shadow: 1px 1px 3px #000;
+    text-align: center;
+    
+}
+h1{
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 0s;
+    text-shadow: 2px 2px 2px black;
+    text-shadow: 0 0 20px #5effa4;
+    text-align: center;
+}
+
+
+nav li:nth-child(1) {
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+nav li:nth-child(2) {
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+nav li:nth-child(3) {
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+
+
+
+
+/*=============================================================animations===============================================*/
+#floating-ghost {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 200px;
+    z-index: 10;
+    opacity: 0.9;
+    pointer-events: auto ;
+    transition: transform 0.3s ease;
+    animation: float 2s ease-in-out infinite, pulseGlow 2s ease-in-out infinite, fadeIn 6s ease-out forwards ;
+    
+
+
+}
+
+/*#floating-ghost:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    animation: none;
+}*/
+
+
+@keyframes float {
+    0% {transform: translateY(0) scale(1);
+    }
+
+    50% {transform: translateY(-15px) scale(1);
+    }
+
+    100% {transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeIn {
+0%{
+    opacity: 0;
+}
+
+100%{
+    opacity: 1;
+}
+    
+}
+
+@keyframes pulseGlow {
+    0%{
+        filter: drop-shadow(0 0 20px #00ffcc); 
+    }
+
+    50%{
+        filter: drop-shadow(0 0 30px #ffffff); 
+    }
+
+    100% {
+        filter: drop-shadow(0 0 20px #39ff14); 
+    }
+    
+}
+
+@keyframes typing {
+    from {width: 0;}
+
+    to {width: 100%;}
+    
+}
+
+.line1 {
+    animation-name: typing;
+    animation-duration: 3s;
+    animation-timing-function: steps(100);
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal ;
+    animation-play-state: running;
+    
+    
+}
+
+.line2 {
+    animation-name: typing;
+    animation-duration: 3s;
+    animation-timing-function: steps(100);
+    animation-delay: 3.1s;
+    animation-fill-mode: forwards;  
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+.line3 {
+    animation-name: typing, blink;
+    animation-duration: 3s;
+    animation-timing-function: steps(100);
+    animation-delay: 6.2s, 9.3s;
+    animation-fill-mode: forwards, none;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, normal;
+    animation-play-state: running, running;
+    
+
+}
+@keyframes blink {
+    0% {
+        border-color: transparent;
+    }
+   
+    50%{border-color: #5effa4;
+    
+    }
+
+
+    100%{border-color: transparent;
+
+    }
+    
+}
+
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+
+.typewriter {
+    overflow: hidden;/*oculta el texto fuera del ancho*/
+    /*border-right: 2px solid #5effa4;*/ /*simula el cursor*/
+    white-space: nowrap;/*permite bajaar de linea cuando llegue a su maxima capacidad antes estaba nowrap pero solo escribia una linea*/
+    width: 0; /*parte desde 0*/
+    font-size: 26px;
+    margin: 0  5px 0 0;
+    line-height: 1.2;
+    max-width: 1000px;
+    box-sizing: border-box;
+    display: inline-block;
+    
+    
+}
+
+.typewriter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+    max-width: 3000px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    
+
+    
+    
+   
+}
+
+.project-card{
+    background-color:  rgba(0, 0, 0, 0.6);
+    border: 2px solid #5effa4;
+    box-shadow: 0 0 10px #5effa4;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #5effa4;
+}
+
+/*.delay-0 {
+    animation-delay: 0s;
+}
+
+.delay-1 {
+    animation-delay: 3s;
+}
+
+.delay-2 {
+    animation-delay: 6s;
+}*/
+
+#about-me {
+    max-width: 800px;
+    padding: 10px;
+
+}
+
+
+.project-card:nth-child(1) {
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 2s;
+}
+
+.project-card:nth-child(2) {
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 2.55s;
+}
+
+/*.project-card:nth-child(3) {
+    animation: fadeIn 3s ease-out forwards;
+    animation-delay: 1.2s;
+}*/
+
+.crt-effect{
+    position: relative;
+    overflow: hidden;
+
+}
+
+.crt-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: repeating-linear-gradient( 0deg, rgba(255, 255, 255, 0.4) 0px, rgba(255, 255, 255, 0.4) 1px, transparent 2px, transparent 4px);
+    animation: scanline 2s linear infinite;
+    pointer-events: none; 
+
+} 
+.flicker {
+    animation: flicker 2s infinite;
+}
+
+@keyframes scanlines {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 4px;
+    }
+    
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% 
+    {
+        opacity: 1;
+    }
+
+    20%, 22%, 24%, 55% 
+       {
+        opacity: 0.4;
+    }
+    
+}
+
+.contact-section {
+  
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.ghost-portals {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.portal {
+    padding: 16px 32px;
+    border: 2px solid #5effa4;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #5effa4;
+    font-size: 24px;
+    box-shadow: 0 0 10px #5effa4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: url("images/pointer1.cur"), pointer;
+    animation: fadeIn 3s ease-out forwards,portalglow 3s ease-in-out infinite;
+
+
+}
+
+.portal:nth-child(1){
+    
+    animation-delay: 3s;
+}
+
+.portal:nth-child(2){
+    
+    animation-delay: 3.5s;
+}
+
+.portal:hover {
+    transform: scale(1.1);
+    box-shadow:  0 0 20px #5effa4;
+
+}
+
+@keyframes portalglow {
+    0%{ box-shadow: 0 0 10px #5effa4;}
+    50% { box-shadow: 0 0 20px #5effa4;}
+    100%{ box-shadow: 0 0 10px #5effa4;}
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  header {
+    width: 95%;
+    padding: 10px;
+    height: auto;
+  }
+
+  nav > ul {
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 10px;
+  }
+
+  .typewriter-container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .typewriter p {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .project-card {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .ghost-portals {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .ghost-portals a {
+    width: 90%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

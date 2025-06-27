@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Site</title>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1 class="flicker">🧪Ghossty Zone</h1>
+    <nav>
+      <ul>
+        <li class="crt-effect"><a href="#about">About</a></li>
+        <li class="crt-effect"><a href="#projects">Projects</a></li>
+        <li class="crt-effect"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>👀About Me</h2>
+    <section id="about-me">
+      
+      <div class="typewriter-container">
+        <p class="typewriter line1">Hi! I'm Javier, a passionate self-taught developer and aspiring ethical hacker 👾<br></p>
+        <p class="typewriter line2">I love turning spooky ideas into code, crafting digital haunted spaces with a retro soul</p> 
+        <p class="typewriter line3">Currently learning HTML, CSS, and Python while brewing eerie designs and playful interactions..</p>
+      </div>
+    </section>
+
+    <section id="projects" >
+      <h2>🕹️ Projects</h2>
+      <div class="project-grid">
+        <div class="project-card crt-effect">
+          <h3 class="flicker"> 💻IP-Port-Scanner</h3> 
+          <p class="flicker"> Tool build with Python to detect active IPs and ports on  a local network.</p>
+          <a href="https://github.com/ghossty55/ip-port-scanner-python" target="_blank" rel="noopener noreferrer"><span class="flicker"> View on GitHub </span></a>
+        </div>
+
+        <div class="project-card crt-effect">
+          <h3 class="flicker"> 🍽️ Restaurant Menu Byte&bite </h3>
+          <p class="flicker">Fully responsive menu created using only HTML, showcasing semantic tags and structure.</p>
+          <a href="https://github.com/ghossty55/Restaurant-menu-HTML" target="_blank" rel="noopener noreferrer"> <span class="flicker"> View on GitHub </span></a>
+        </div>
+      </div>
+     
+        
+        <!--Seguridad: Usamos rel="noopener noreferrer" junto a target="_blank" para prevenir ataques de tipo reverse tabnabbing.
+
+- rel="noopener": evita que la nueva pestaña acceda a la página original con window.opener.
+- rel="noreferrer": también evita que se envíe la URL del origen al sitio de destino
+
+.-->
+      </ul>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2 >📡Contact</h2>
+      <div class="ghost-portals">
+        <a href="mailto:ghossty.codes@gmail.com" class="portal email crt-effect">Email📧</a></li>
+        <a href="https://www.instagram.com/ghossty3011/" target="_blank"  rel="noopener noreferrer" class="portal instagram crt-effect">Instagram📸</a></li>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Javier Peralta Acevedo</p>
+  </footer>
+  <img src="images/fixed_image.png" alt="8-bit ghost" id="floating-ghost">
+</body>
+</html>
