@@ -94,7 +94,7 @@ a, button, [role="button"] {
 }
 
 header {
-    position: sticky;
+    position: static;
     background-color: rgba(0, 0, 0, 0.5);/*crea la caja negra translucida que divide el contenido del fondo*/
     padding: 20px;
     border-radius: 10px;
@@ -107,7 +107,7 @@ header {
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 255, 170, 0.3);
     /*top: 0;*/
-    z-index: 1000;
+    z-index: 1000;*/
  
 }
 
